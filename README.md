@@ -6,7 +6,8 @@ train.py (training implementation)<br />
 predict_video.py <br />
 predict_image.py <br />
 /model
- - custom.py (UNet model implementation) <br />
+ - custom.py (UNet model implementation) 
+
 /utils
  - dataset.py (Dataset loader)
  - eval.py (Model evaluation implementation)
