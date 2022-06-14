@@ -2,11 +2,11 @@
 Unet image multiclass segmentation 
 
 ## Folder structure
-train.py (training implementation) \n
-predict_video.py \n
-predict_image.py \n
+train.py (training implementation)<br />
+predict_video.py <br />
+predict_image.py <br />
 /model
- - custom.py (UNet model implementation) \n 
+ - custom.py (UNet model implementation) <br />
 /utils
  - dataset.py (Dataset loader)
  - eval.py (Model evaluation implementation)
