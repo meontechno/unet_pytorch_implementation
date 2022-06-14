@@ -13,9 +13,9 @@ predict.py <br />
 
 ## Segmentation 
 Total classes 3
-    - Background class (floor, windows, blinds, door, ceiling etc) -> mask color encoding black (0, 0, 0)
-    - Wall -> mask color encoding red (255, 0, 0)
-    - Patch -> mask color encoding green (0, 255, 0)
+ - Background class (floor, windows, blinds, door, ceiling etc) -> mask color encoding black (0, 0, 0)
+ - Wall -> mask color encoding red (255, 0, 0)
+ - Patch -> mask color encoding green (0, 255, 0)
 
 
 ## Neural Net Architecture: UNet
@@ -33,13 +33,14 @@ Images and masks are then split into Train, Val and Test sets with ratios 70%, 2
 Additionally image augmentations can used to increase the size of the training set by making slight alterations to the training images (Horizontal flips, Noise, blur, etc).
 
 ### Color encoding
+<pre>
 background class pixels are masked with color black (0, 0, 0)
 Wall class pixels are masked with color red (255, 0, 0)
 Patch class pixels are masked with color green (0, 255, 0)
-
-
+</pre>
 
 ## Training Inputs & Outputs
+<pre>
 Input tensor shape: (batch x channels x height x width)
 Input tensor example: (16 x 3 x 224 x 224)
 where, batch = training batch size
@@ -55,9 +56,10 @@ where, batch = training batch size
        height = 224 same as input height
        width = 224 same as input width
 output tensor contains pixel level probabilities in separate channels for each class.
-
+</pre>
 
 ## Inference Inputs & Outputs
+<pre>
 Input tensor shape: (batch x channels x height x width)
 Input tensor example: (1 x 3 x 224 x 224)
 where, batch = 1
@@ -74,4 +76,4 @@ where, batch = 1
        width = 224 same as input width
 output tensor contains pixel level probabilities in separate channels for each class.
 Additional processing is done to extract list of all predicted classes from the mask.
-
+</pre>
